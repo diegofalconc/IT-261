@@ -51,7 +51,7 @@
  $quotes[] = 'errors are not in the art but in the artificers. <br> Please fill out all the fields.';
  $quotes[] = 'There is a disturbance in the Force. <br> Please fill out all the fields. ';
  $quotes[] = 'Houston, we have a problem. <br> Please fill out all the fields.';
- $quotes[] = 'quotes4';
+ $quotes[] = 'Wow wow wow! Hold up! Fix yo errors.';
  $quotes[] = 'quotes5';
 
  srand ((double) microtime() * 1000000);
@@ -81,3 +81,4 @@ if (isset($_POST['num1'],
 
 </body>
 </html>
+
