@@ -50,7 +50,7 @@
  $quotes[] = 'from the errors of others, a wise man corrects his own. <br> Please fill out all the fields.';
  $quotes[] = 'errors are not in the art but in the artificers. <br> Please fill out all the fields.';
  $quotes[] = 'There is a disturbance in the Force. <br> Please fill out all the fields. ';
- $quotes[] = 'quotes3';
+ $quotes[] = "Wow wow wow! Hold up! Fix yo errors.";
  $quotes[] = 'quotes4';
  $quotes[] = 'quotes5';
 
