@@ -49,7 +49,7 @@
         //Make sure to start the very first word with lower case and add <br> after quote and fill out the form
  $quotes[] = 'from the errors of others, a wise man corrects his own. <br> Please fill out all the fields.';
  $quotes[] = 'errors are not in the art but in the artificers. <br> Please fill out all the fields.';
- $quotes[] = 'quotes2';
+ $quotes[] = 'There is a disturbance in the Force. <br> Please fill out all the fields. ';
  $quotes[] = 'quotes3';
  $quotes[] = 'quotes4';
  $quotes[] = 'quotes5';
