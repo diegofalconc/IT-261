@@ -52,7 +52,7 @@
  $quotes[] = 'There is a disturbance in the Force. <br> Please fill out all the fields. ';
  $quotes[] = 'Houston, we have a problem. <br> Please fill out all the fields.';
  $quotes[] = 'Wow wow wow! Hold up! Fix yo errors.';
- $quotes[] = 'quotes5';
+ $quotes[] = 'The greatest mistake is to imagine that we never err.';
 
  srand ((double) microtime() * 1000000);
  $random_number = rand(0,count($quotes)-1);
