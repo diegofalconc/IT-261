@@ -51,8 +51,9 @@
  $quotes[] = 'Errors are not in the art but in the artificers. <br> Please fill out all the fields.';
  $quotes[] = 'There is a disturbance in the Force. <br> Please fill out all the fields. ';
  $quotes[] = 'Houston, we have a problem. <br> Please fill out all the fields.';
+ $quotes[] = 'The greatest mistake is to imagine that we never err. <br> Please fill out all the fields.';   
  $quotes[] = 'Wow wow wow! Hold up! Fix yo errors, fill out all the fields.';
- $quotes[] = 'Seems that you\'ve been on the computer whole day! Please fill out all the fields.';
+ $quotes[] = 'Seems that you\'ve been on the computer whole day! <br> Please fill out all the fields.';
 
  srand ((double) microtime() * 1000000);
  $random_number = rand(0,count($quotes)-1);
