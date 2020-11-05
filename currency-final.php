@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['currency']) &&
         is_numeric($_POST['amount']) &&
         is_numeric($_POST['currency']) &&
-        $_POST['amount'] > 800
+        $_POST['amount'] > 750
        
     ) {
         $name = $_POST['name'];
@@ -176,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['currency']) &&
         is_numeric($_POST['amount']) &&
         is_numeric($_POST['currency']) &&
-        $_POST['amount'] < 800
+        $_POST['amount'] < 750
     ) {
 
         $total = $amount * $currency;
