@@ -1,0 +1,404 @@
+/**
+ * @title   Umbrella (CSS only)
+ * @version   0.1
+ * @package   xhtml-css
+ * @author    Calvin
+ * @copyright 2017 by the author
+ * @cssdoc    version 1.0-pre
+ * @license   GPL v3
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.umb {
+    width: 190px;
+    height: 250px;
+    /*margin: 200px auto;*/
+    -webkit-border-top-left-radius: 150px;
+    -moz-border-radius-topleft: 150px;
+    border-top-left-radius: 150px;
+    -webkit-border-top-right-radius: 150px;
+    -moz-border-radius-topright: 150px;
+    border-top-right-radius: 150px;
+    background: #fff;
+    position: relative;
+    top: 200px;
+    left: -200px;
+    -webkit-animation: walk 30s linear infinite;
+    -moz-animation: walk 30s linear infinite;
+    -o-animation: walk 30s linear infinite;
+    animation: walk 30s linear infinite;
+}
+
+@-webkit-keyframes walk {
+    from {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    to {
+        -webkit-transform: translateX(600px);
+        transform: translateX(600px);
+    }
+}
+
+@-moz-keyframes walk {
+    from {
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    to {
+        -moz-transform: translateX(600px);
+        transform: translateX(600px);
+    }
+}
+
+@-o-keyframes walk {
+    from {
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    to {
+        -o-transform: translateX(600px);
+        transform: translateX(600px);
+    }
+}
+
+@keyframes walk {
+    from {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    to {
+        -webkit-transform: translateX(600px);
+        -moz-transform: translateX(600px);
+        -o-transform: translateX(600px);
+        transform: translateX(600px);
+    }
+}
+
+.w {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 55px;
+    background-color: #fff;
+}
+
+.w1 {
+    left: -5px;
+}
+
+.w2 {
+    left: 60px;
+}
+
+.w3 {
+    left: 125px;
+}
+
+.vl {
+    background-color: #0590DD;
+    width: 5px;
+    height: 200px;
+    position: absolute;
+    left: 92px;
+    top: -20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.drop {
+    width: 0;
+    height: 0;
+    border: 30px solid #0590DD;
+    border-top-width: 0px;
+    border-top-color: white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    margin-top: -120px;
+    -webkit-transition: -webkit-transform 1.2s;
+    transition: -webkit-transform 1.2s;
+    -o-transition: -o-transform 1.2s;
+    -moz-transition: transform 1.2s, -moz-transform 1.2s;
+    transition: transform 1.2s;
+    transition: transform 1.2s, -webkit-transform 1.2s, -moz-transform 1.2s, -o-transform 1.2s;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    z-index: -1;
+}
+
+.rain1 {
+    left: 100px;
+    top: -50px;
+    -webkit-animation: rain 1s linear 2.1s infinite;
+    -moz-animation: rain 1s linear 2.1s infinite;
+    -o-animation: rain 1s linear 2.1s infinite;
+    animation: rain 1s linear 2.1s infinite;
+}
+
+.rain2 {
+    left: 200px;
+    top: -50px;
+    -webkit-animation: rain 1.2s linear 2.2s infinite;
+    -moz-animation: rain 1.2s linear 2.2s infinite;
+    -o-animation: rain 1.2s linear 2.2s infinite;
+    animation: rain 1.2s linear 2.2s infinite;
+}
+
+.rain3 {
+    -webkit-animation: rain 1.3s linear 2.3s infinite;
+    -moz-animation: rain 1.3s linear 2.3s infinite;
+    -o-animation: rain 1.3s linear 2.3s infinite;
+    animation: rain 1.3s linear 2.3s infinite;
+    left: 300px;
+    top: -50px;
+}
+
+.rain4 {
+    -webkit-animation: rain 1.4s linear 2.4s infinite;
+    -moz-animation: rain 1.4s linear 2.4s infinite;
+    -o-animation: rain 1.4s linear 2.4s infinite;
+    animation: rain 1.4s linear 2.4s infinite;
+    left: 400px;
+    top: -50px;
+}
+
+.rain5 {
+    -webkit-animation: rain 1.5s linear 2.5s infinite;
+    -moz-animation: rain 1.5s linear 2.5s infinite;
+    -o-animation: rain 1.5s linear 2.5s infinite;
+    animation: rain 1.5s linear 2.5s infinite;
+    left: 500px;
+    top: -50px;
+}
+
+.rain6 {
+    -webkit-animation: rain 1.6s linear 2.6s infinite;
+    -moz-animation: rain 1.6s linear 2.6s infinite;
+    -o-animation: rain 1.6s linear 2.6s infinite;
+    animation: rain 1.6s linear 2.6s infinite;
+    left: 600px;
+    top: -50px;
+}
+
+.rain7 {
+    -webkit-animation: rain 1.7s linear 2.7s infinite;
+    -moz-animation: rain 1.7s linear 2.7s infinite;
+    -o-animation: rain 1.7s linear 2.7s infinite;
+    animation: rain 1.7s linear 2.7s infinite;
+    left: 700px;
+    top: -50px;
+}
+
+.rain8 {
+    -webkit-animation: rain 1.8s linear 2.8s infinite;
+    -moz-animation: rain 1.8s linear 2.8s infinite;
+    -o-animation: rain 1.8s linear 2.8s infinite;
+    animation: rain 1.8s linear 2.8s infinite;
+    left: 800px;
+    top: -50px;
+}
+
+.rain9 {
+    -webkit-animation: rain 1.9s linear 3.2s infinite;
+    -moz-animation: rain 1.9s linear 3.2s infinite;
+    -o-animation: rain 1.9s linear 3.2s infinite;
+    animation: rain 1.9s linear 3.2s infinite;
+    left: 900px;
+    top: -50px;
+}
+
+.rain11 {
+    -webkit-animation: rain 2s linear 3.5s infinite;
+    -moz-animation: rain 2s linear 3.5s infinite;
+    -o-animation: rain 2s linear 3.5s infinite;
+    animation: rain 2s linear 3.5s infinite;
+    left: 1000px;
+    top: -50px;
+}
+
+.rain12 {
+    -webkit-animation: rain 2.3s linear 3.7s infinite;
+    -moz-animation: rain 2.3s linear 3.7s infinite;
+    -o-animation: rain 2.3s linear 3.7s infinite;
+    animation: rain 2.3s linear 3.7s infinite;
+    left: 1100px;
+    top: -50px;
+}
+
+.rain14 {
+    -webkit-animation: rain 2.6s linear 4s infinite;
+    -moz-animation: rain 2.6s linear 4s infinite;
+    -o-animation: rain 2.6s linear 4s infinite;
+    animation: rain 2.6s linear 4s infinite;
+    left: 1200px;
+    top: -50px;
+}
+
+.rain15 {
+    -webkit-animation: rain 2.9s linear 4.3s infinite;
+    -moz-animation: rain 2.9s linear 4.3s infinite;
+    -o-animation: rain 2.9s linear 4.3s infinite;
+    animation: rain 2.9s linear 4.3s infinite;
+    left: 1300px;
+    top: -50px;
+}
+
+.rain16 {
+    -webkit-animation: rain 3.3s linear 4.6s infinite;
+    -moz-animation: rain 3.3s linear 4.6s infinite;
+    -o-animation: rain 3.3s linear 4.6s infinite;
+    animation: rain 3.3s linear 4.6s infinite;
+    left: 1400px;
+    top: -50px;
+}
+
+.rain17 {
+    -webkit-animation: rain 3.6s linear 3s infinite;
+    -moz-animation: rain 3.6s linear 3s infinite;
+    -o-animation: rain 3.6s linear 3s infinite;
+    animation: rain 3.6s linear 3s infinite;
+    left: 1500px;
+    top: -50px;
+}
+
+.rain18 {
+    -webkit-animation: rain 3.6s linear 2.6s infinite;
+    -moz-animation: rain 3.6s linear 2.6s infinite;
+    -o-animation: rain 3.6s linear 2.6s infinite;
+    animation: rain 3.6s linear 2.6s infinite;
+    left: 1600px;
+    top: -50px;
+}
+
+.rain19 {
+    -webkit-animation: rain 3.6s linear 2s infinite;
+    -moz-animation: rain 3.6s linear 2s infinite;
+    -o-animation: rain 3.6s linear 2s infinite;
+    animation: rain 3.6s linear 2s infinite;
+    left: 1700px;
+    top: -50px;
+}
+
+.rain20 {
+    -webkit-animation: rain 3.6s linear 4s infinite;
+    -moz-animation: rain 3.6s linear 4s infinite;
+    -o-animation: rain 3.6s linear 4s infinite;
+    animation: rain 3.6s linear 4s infinite;
+    left: 1800px;
+    top: -50px;
+}
+
+@-webkit-keyframes rain {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 1500px;
+    }
+}
+
+@-moz-keyframes rain {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 1500px;
+    }
+}
+
+@-o-keyframes rain {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 1500px;
+    }
+}
+
+@keyframes rain {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 1500px;
+    }
+}
+
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #aaa;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.copyright:after {
+    content: "Calvin";
+}
+
+form {
+    width: 350px;
+    margin: 0 auto;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+fieldset {
+    color: #666;
+    padding: 10px 15px 10px 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.box {
+    width: 600px;
+    margin: 20px auto;
+    background: beige;
+    padding: 20px;
+    border: 1px solid green;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    color: red;
+    font-style: italic;
+}
