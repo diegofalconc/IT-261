@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <link rel="stylesheet" href="rain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Currency Form</title>
 
@@ -162,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
         echo '<div class="box">';
        
-        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+        echo '<p>' . $name . ', you have <b> $' . $total_f . ' </b> American Dollars</p>';
         echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
         echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
         echo '<script>confetti.start();</script>';
