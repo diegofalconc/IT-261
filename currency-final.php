@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <script src="confetti.js"></script>
+
 <head>
     <link rel="stylesheet" href="rain.css">
     <meta charset="UTF-8">
@@ -136,9 +137,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </fieldset>
 
     </form>
-
+    
     <?php
-    if (
+    if ( //CONFETTI - if amount is over 750
         isset($_POST['name'],
         $_POST['email'],
         $_POST['amount'],
@@ -161,14 +162,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
         echo '<div class="box">';
        
-        echo '<h2>Thank you, ' . $name . ' for filling out our form! Your money will be wired to ' . $bank . ' within 24 hours</h2>';
-        echo '<p>' . $name . ', you now have $' . $total_f . ' American Dollars!</p>';
+        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
         echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
         echo '<script>confetti.start();</script>';
         echo '<h1> Nice Savings <h1>';
         echo '<img src="vandamm.jpg">';
         echo  '</div>';
-    } else if (
+    } //end of if
+    else if (//RAIN - if amount is lower than 750
         isset($_POST['name'],
         $_POST['email'],
         $_POST['amount'],
@@ -176,14 +178,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['currency']) &&
         is_numeric($_POST['amount']) &&
         is_numeric($_POST['currency']) &&
-        $_POST['amount'] < 750
+        $_POST['amount'] >= 500
     ) {
-
         $total = $amount * $currency;
         $total_f = number_format($total, 2);
         echo '<div class="box">';
-        echo '<h2>Thank you, ' . $name . ' for filling out our form! Your money will be wired to ' . $bank . ' within 24 hours</h2>';
-        echo '<p>' . $name . ', you now have $' . $total_f . ' American Dollars!</p>';
+        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
         echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
         echo '<h1>Maybe take a student loan?</h1>';
         echo '<img src="meme.jpg">';
@@ -210,7 +211,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<div class="drop rain19"></div>';
         echo '<div class="drop rain20"></div>';
         echo '</div>';
-    }
+    } //end of rain else if 
+    else if ( //SNOW - if amount is below 500
+        isset($_POST['name'],
+        $_POST['email'],
+        $_POST['amount'],
+        $_POST['bank'],
+        $_POST['currency']) &&
+        is_numeric($_POST['amount']) &&
+        is_numeric($_POST['currency']) &&
+        $_POST['amount'] < 500
+       
+    ) {
+        $name = $_POST['name'];
+        $bank = $_POST['bank'];
+        $email = $_POST['email'];
+        $amount = $_POST['amount'];
+        $currency = $_POST['currency'];
+
+        $total = $amount * $currency;
+        $total_f = number_format($total, 2);
+  
+        echo '<div class="box">';
+        echo '<h1> Wow... You need a better savings plan, pal... <h1>';
+        echo '<img src="scooby.gif">';
+        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+        echo '<script src="snow.js"></script>';
+        echo  '</div>';
+    } //end of snow else if
 
 
         ?>
@@ -219,4 +249,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </body>
 
+
 </html>
+
