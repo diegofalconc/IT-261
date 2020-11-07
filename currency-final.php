@@ -47,11 +47,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <script src="confetti.js"></script>
+<script src="firework.js"></script>
 
 <head>
     <link rel="stylesheet" href="rain.css">
     <meta charset="UTF-8">
     <title>Currency Form</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="makeItRain.js" > </script>
+    <link rel="stylesheet" type="text/css" href="makeItRain.css">
+    <style>
+        .giphy-embed{ 
+            z-index:-1;
+            width: 100%; 
+            height: 100%;
+        }
+    </style>
 
 </head>
 
@@ -139,7 +150,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
     
     <?php
-    if ( //CONFETTI - if amount is over 750
+    if ( //CONFETTI - if amount is over 1000
+        isset($_POST['name'],
+        $_POST['email'],
+        $_POST['amount'],
+        $_POST['bank'],
+        $_POST['currency']) &&
+        is_numeric($_POST['amount']) &&
+        is_numeric($_POST['currency']) &&
+        $_POST['amount'] > 1000
+       
+    ) {
+        $name = $_POST['name'];
+        $bank = $_POST['bank'];
+        $email = $_POST['email'];
+        $amount = $_POST['amount'];
+        $currency = $_POST['currency'];
+
+        $total = $amount * $currency;
+        $total_f = number_format($total, 2);
+  
+    
+        echo '<div class="box">';
+       
+        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+        echo '<h1> Big Balla! Shot Calla!! <h1>';
+        echo '<script src="snow.js"></script>';
+        echo '<iframe src="https://giphy.com/embed/Tex4wVhhs4iwKoV7YT" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/memecandy-Tex4wVhhs4iwKoV7YT"></a></p>';
+        echo  '</div>';
+    } //end of if
+    else if ( //CONFETTI - if amount is over 750
         isset($_POST['name'],
         $_POST['email'],
         $_POST['amount'],
