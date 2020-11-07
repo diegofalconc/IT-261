@@ -15,9 +15,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-
-
 .wrap {
     width: 100vw;
     height: 100vh;
@@ -379,17 +376,17 @@ input {
     margin-bottom: 10px;
 }
 
-input[type=text], input[type=email] {
+input[type=text],
+input[type=email] {
     width: 100%;
-    border: none;
+    border: 1px solid black;
     padding: 5px 5px 8px 5px;
-   
 }
-input[type=submit]{
-    
-    border:none;
+
+input[type=submit] {
+    border: none;
     padding: 8px;
-    background-color:dodgerblue;
+    background-color: dodgerblue;
     color: #fff;
 }
 
@@ -404,13 +401,13 @@ label {
     margin-bottom: 5px;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
-    color:darkblue;
+    color: darkblue;
     padding-left: 3px;
 }
 
@@ -422,20 +419,21 @@ a{
     box-shadow: 2px 1px 8px 1px #444;
 }
 
-h1, b{
-    color:darkblue;
+h1,
+b {
+    color: darkblue;
     font-weight: 600;
 }
 
 select {
     margin-bottom: 10px;
-    border: none;
+    border: 1px border black;
 }
-img{
-    
-   display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 span {
