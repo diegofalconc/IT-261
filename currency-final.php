@@ -139,16 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
     
     <?php
-    if ( //CONFETTI - if amount is over 750
+    if ( 
         isset($_POST['name'],
         $_POST['email'],
         $_POST['amount'],
         $_POST['bank'],
         $_POST['currency']) &&
         is_numeric($_POST['amount']) &&
-        is_numeric($_POST['currency']) &&
-        $_POST['amount'] > 750
-       
+        is_numeric($_POST['currency'])        
     ) {
         $name = $_POST['name'];
         $bank = $_POST['bank'];
@@ -158,94 +156,63 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $total = $amount * $currency;
         $total_f = number_format($total, 2);
+        echo $total_f;
   
-    
-        echo '<div class="box">';
-       
-        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
-        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
-        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
-        echo '<script>confetti.start();</script>';
-        echo '<h1> Nice Savings <h1>';
-        echo '<img src="vandamm.jpg">';
-        echo  '</div>';
+        if($total > 750){ //CONFETTI - if total is over 750
+            echo '<div class="box"><style> .box{background: #8bed61;} </style>'; //background box color changes to green
+        
+            echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+            echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+            echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+            echo '<script>confetti.start();</script>';
+            echo '<h1> Nice Savings <h1>';
+            echo '<img src="vandamm.jpg">';
+            echo  '</div>';
+        } else if($total >= 500){ //RAIN - if total is lower than 750
+            echo '<div class="box"> <style> .box{background: #f4f73e;} </style> '; //background box color changes to yellow
+            echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+            echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+            echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+            echo '<h1>Maybe take a student loan?</h1>';
+            echo '<img src="meme.jpg">';
+            echo ' </div>';
+            echo '<div class="wrap">';
+            echo '<div class="drop rain1"></div>';
+            echo '<div class="drop rain2"></div>';
+            echo '<div class="drop rain3"></div>';
+            echo '<div class="drop rain4"></div>';
+            echo '<div class="drop rain5"></div>';
+            echo '<div class="drop rain6"></div>';
+            echo '<div class="drop rain7"></div>';
+            echo '<div class="drop rain8"></div>';
+            echo '<div class="drop rain9"></div>';
+            echo '<div class="drop rain10"></div>';
+            echo '<div class="drop rain11"></div>';
+            echo '<div class="drop rain12"></div>';
+            echo '<div class="drop rain13"></div>';
+            echo '<div class="drop rain14"></div>';
+            echo '<div class="drop rain15"></div>';
+            echo '<div class="drop rain16"></div>';
+            echo '<div class="drop rain17"></div>';
+            echo '<div class="drop rain18"></div>';
+            echo '<div class="drop rain19"></div>';
+            echo '<div class="drop rain20"></div>';
+            echo '</div>';
+        }
+        else if($total < 500){ //SNOW - if total is below 500
+            echo '<div class="box">  <style> .box{background: #fc6a6a;} </style>'; //background box color changes to red
+            echo '<h1> Wow... You need a better savings plan, pal... <h1>';
+            echo '<img src="scooby.gif">';
+            echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
+            echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+            echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+            echo '<script src="snow.js"></script>';
+            echo  '</div>';
+        }
     } //end of if
-    else if (//RAIN - if amount is lower than 750
-        isset($_POST['name'],
-        $_POST['email'],
-        $_POST['amount'],
-        $_POST['bank'],
-        $_POST['currency']) &&
-        is_numeric($_POST['amount']) &&
-        is_numeric($_POST['currency']) &&
-        $_POST['amount'] >= 500
-    ) {
-        $total = $amount * $currency;
-        $total_f = number_format($total, 2);
-        echo '<div class="box">';
-        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
-        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
-        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
-        echo '<h1>Maybe take a student loan?</h1>';
-        echo '<img src="meme.jpg">';
-        echo ' </div>';
-        echo '<div class="wrap">';
-        echo '<div class="drop rain1"></div>';
-        echo '<div class="drop rain2"></div>';
-        echo '<div class="drop rain3"></div>';
-        echo '<div class="drop rain4"></div>';
-        echo '<div class="drop rain5"></div>';
-        echo '<div class="drop rain6"></div>';
-        echo '<div class="drop rain7"></div>';
-        echo '<div class="drop rain8"></div>';
-        echo '<div class="drop rain9"></div>';
-        echo '<div class="drop rain10"></div>';
-        echo '<div class="drop rain11"></div>';
-        echo '<div class="drop rain12"></div>';
-        echo '<div class="drop rain13"></div>';
-        echo '<div class="drop rain14"></div>';
-        echo '<div class="drop rain15"></div>';
-        echo '<div class="drop rain16"></div>';
-        echo '<div class="drop rain17"></div>';
-        echo '<div class="drop rain18"></div>';
-        echo '<div class="drop rain19"></div>';
-        echo '<div class="drop rain20"></div>';
-        echo '</div>';
-    } //end of rain else if 
-    else if ( //SNOW - if amount is below 500
-        isset($_POST['name'],
-        $_POST['email'],
-        $_POST['amount'],
-        $_POST['bank'],
-        $_POST['currency']) &&
-        is_numeric($_POST['amount']) &&
-        is_numeric($_POST['currency']) &&
-        $_POST['amount'] < 500
-       
-    ) {
-        $name = $_POST['name'];
-        $bank = $_POST['bank'];
-        $email = $_POST['email'];
-        $amount = $_POST['amount'];
-        $currency = $_POST['currency'];
-
-        $total = $amount * $currency;
-        $total_f = number_format($total, 2);
-  
-        echo '<div class="box">';
-        echo '<h1> Wow... You need a better savings plan, pal... <h1>';
-        echo '<img src="scooby.gif">';
-        echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
-        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
-        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
-        echo '<script src="snow.js"></script>';
-        echo  '</div>';
-    } //end of snow else if
-
-
-        ?>
-
-      
+    
+    ?>
+    
 
 </body>
 
