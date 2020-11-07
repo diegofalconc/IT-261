@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $total_f = number_format($total, 2);
         
 
-        if($total > 1000){ //Fireworks - if total is Above 1000
+        if($total > 1000){ //More confetti - if total is Above 1000
               echo '<div class="box">';
 
               echo '<p>' . $name . ', you have $' . $total_f . ' American Dollars</p>';
