@@ -165,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $total = $amount * $currency;
         $total_f = number_format($total, 2);
-        echo $total_f;
+        
 
         if($total > 1000){ //Fireworks - if total is Above 1000
               echo '<div class="box">';
@@ -174,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
               echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
               echo '<h1> Big Balla! Shot Calla!! <h1>';
-              echo '<script src="snow.js"></script>';
+              echo '<script>confetti.start();</script>';
               echo '<iframe src="https://giphy.com/embed/Tex4wVhhs4iwKoV7YT" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/memecandy-Tex4wVhhs4iwKoV7YT"></a></p>';
               echo  '</div>';
             
@@ -238,3 +238,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 </html>
+
