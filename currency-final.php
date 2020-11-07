@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <link rel="stylesheet" href="rain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Currency Form</title>
 
@@ -158,6 +159,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $total_f = number_format($total, 2);
         echo $total_f;
   
+    
+        echo '<div class="box">';
+       
+        echo '<p>' . $name . ', you have <b> $' . $total_f . ' </b> American Dollars</p>';
+        echo '<h2>' . $name . ' , your money will be wired to ' . $bank . ' within 24 hours</h2>';
+        echo '<p> We will be getting back to you via your email: ' . $email . '</p>';
+        echo '<script>confetti.start();</script>';
+        echo '<h1> Nice Savings <h1>';
+        echo '<img src="vandamm.jpg">';
+        echo  '</div>';
+
         if($total > 750){ //CONFETTI - if total is over 750
             echo '<div class="box"><style> .box{background: #8bed61;} </style>'; //background box color changes to green
         
@@ -209,6 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '<script src="snow.js"></script>';
             echo  '</div>';
         }
+
     } //end of if
     
     ?>
