@@ -11,7 +11,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: azure;
+    font-family: 'Montserrat', sans-serif;
 }
+
+
+
 
 .wrap {
     width: 100vw;
@@ -365,19 +370,33 @@ body {
 form {
     width: 350px;
     margin: 0 auto;
+    background-color: aliceblue;
+    margin-top: 40px;
+    box-shadow: 2px 1px 8px 1px #444;
 }
 
 input {
     margin-bottom: 10px;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
     width: 100%;
+    border: none;
+    padding: 5px 5px 8px 5px;
+   
+}
+input[type=submit]{
+    
+    border:none;
+    padding: 8px;
+    background-color:dodgerblue;
+    color: #fff;
 }
 
 fieldset {
     color: #666;
     padding: 10px 15px 10px 10px;
+    border: none;
 }
 
 label {
@@ -385,16 +404,38 @@ label {
     margin-bottom: 5px;
 }
 
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color:darkblue;
+    padding-left: 3px;
+}
+
 .box {
     width: 600px;
     margin: 20px auto;
     background: beige;
     padding: 20px;
-    border: 1px solid green;
+    box-shadow: 2px 1px 8px 1px #444;
+}
+
+h1, b{
+    color:darkblue;
+    font-weight: 600;
 }
 
 select {
     margin-bottom: 10px;
+    border: none;
+}
+img{
+    
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 span {
